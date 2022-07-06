@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Archivo";
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#brand {
+    position: relative;
+    text-align: center;
+}
+
+#profile {
+    float: right;
+}
+
+#main-menu {
+    display: inline-block;
+    top: 5px;
+}
+
+#left-side {
+    flex-grow: 1;
+    white-space: nowrap;
+    width: 50%;
+}
+
+#left-nav {
+    display: inline-block;
+}
+
+#left {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#left li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#left li a {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#center {
+    position: relative;
+    flex-shrink: 0;
+}
+
+#right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    white-space: nowrap;
+}
+
+#right a {
+    padding: 20px 40px;
+}
+
+#background-img {
+    height: 400px;
+    max-height: 400px;
+    background-image: url('assets/background.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#background-img h1 {
+    color: white;
+}
+
+#step-container {
+    text-align: center;
+    height: 250px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#steps {
+    padding: 10px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.step-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.step-words {
+    display: flex;
+    flex-direction: column;
+}
+
+#courses-container {
+    text-align: center;
+}
+
+#courses {
+    display: flex;
+}
