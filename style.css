@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-#container {
+#nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +97,7 @@ a {
 }
 
 #steps {
-    padding: 10px 0px;
+    padding: 25px 0px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -125,8 +125,76 @@ a {
 
 #courses-container {
     text-align: center;
+    padding: 30px;
+    background-color: #A3A3A3;
+}
+
+#courses-container h2 {
+    padding: 0;
+    margin: 0;
 }
 
 #courses {
     display: flex;
+    justify-content: center;
+    padding: 30px 20px 0px 20px;
+}
+
+.course {
+    text-align: left;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.course-img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.course-info p, .course h4, .step-words h3,
+.step-words p {
+    margin: 5px;
+}
+
+.course-authors {
+    font-size: 14px;
+    color: #6A6F73
+}
+
+.course-rating-label {
+    color: #A36200
+}
+
+#newsletter {
+    padding: 20px;;
+    text-align: center;
+    height: 125px;
+}
+
+#newsletter-form {
+    display: flex;
+    justify-content: center;
+}
+
+#newsletter-email {
+    font-size: 18px;
+    padding: 1px 15px;
+    border-radius: 10px;
+    border: 1px solid #A3A3A3;
+    width: 500px;
+    height: 45px;
+}
+
+#newsletter-btn {
+    padding: 10px 50px;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #8C8C8C;
+    color: white;
+}
+
+#newsletter-btn:hover {
+    cursor: pointer;
 }
