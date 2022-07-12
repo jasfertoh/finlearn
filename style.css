@@ -11,28 +11,14 @@ body {
     align-items: center;
 }
 
-#brand {
-    position: relative;
-    text-align: center;
-}
-
-#profile {
-    float: right;
-}
-
 #main-menu {
     display: inline-block;
-    top: 5px;
 }
 
 #left-side {
     flex-grow: 1;
     white-space: nowrap;
     width: 50%;
-}
-
-#left-nav {
-    display: inline-block;
 }
 
 #left {
@@ -84,15 +70,23 @@ a {
     text-align: center;
 }
 
-#background-img h1 {
+#background-img h1, #background-img2 h1 {
     color: white;
+}
+
+#background-img2 {
+    height: 200px;
+    max-height: 400px;
+    background-image: url('assets/background.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #step-container {
     text-align: center;
-    height: 250px;
     background-color: white;
-    border: 1px solid black;
     padding: 20px;
 }
 
@@ -100,8 +94,8 @@ a {
     padding: 25px 0px;
     display: flex;
     width: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .step {
@@ -110,7 +104,7 @@ a {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 0 40px;
+    flex-basis: 30%;
 }
 
 .step-logo {
@@ -121,12 +115,14 @@ a {
 .step-words {
     display: flex;
     flex-direction: column;
+    padding: 0 40px;
 }
 
 #courses-container {
     text-align: center;
     padding: 30px;
     background-color: #A3A3A3;
+    overflow-x: hidden;
 }
 
 #courses-container h2 {
@@ -136,14 +132,18 @@ a {
 
 #courses {
     display: flex;
-    justify-content: center;
-    padding: 30px 20px 0px 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .course {
     text-align: left;
     padding: 10px;
-    max-width: 300px;
+    flex-basis: 25%;
+    
 }
 
 .course-img {
@@ -151,7 +151,7 @@ a {
     border-radius: 10px;
 }
 
-.course-info p, .course h4, .step-words h3,
+.course-info p, .course-title, .step-words h3,
 .step-words p {
     margin: 5px;
 }
@@ -159,6 +159,10 @@ a {
 .course-authors {
     font-size: 14px;
     color: #6A6F73
+}
+
+.course-title {
+    white-space: normal
 }
 
 .course-rating-label {
@@ -178,11 +182,10 @@ a {
 
 #newsletter-email {
     font-size: 18px;
-    padding: 1px 15px;
+    padding: 10px 15px;
     border-radius: 10px;
     border: 1px solid #A3A3A3;
-    width: 500px;
-    height: 45px;
+    flex-basis: 50%;
 }
 
 #newsletter-btn {
@@ -193,8 +196,146 @@ a {
     font-size: 24px;
     background-color: #8C8C8C;
     color: white;
+    flex-basis: 30%;
 }
 
 #newsletter-btn:hover {
     cursor: pointer;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger:hover {
+    cursor: pointer;
+}
+
+/* width */
+#courses::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.45s ease-in-out;
+    display: none;
+}
+
+.menu.is-active {
+    top: 0;
+    left: 0;
+}
+
+.menu-inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    margin: 2rem 1.25rem;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.menu-link {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--color-black);
+    transition: all 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay.is-active {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .overlay.is-active {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #courses-container {
+        padding: 30px 15px;
+    }
+
+    #newsletter-form {
+        flex-direction: column;
+    }
+
+    #newsletter-email {
+        margin-bottom: 10px;
+    }
+
+    #main-menu {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        white-space: nowrap;
+        padding: 20px 40px;
+    }
+
+    #steps {
+        flex-direction: column;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .step {
+        padding: 20px 0px
+    }
+
+    .step-words {
+        padding: 0 20px;
+    }
 }
