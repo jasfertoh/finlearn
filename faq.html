@@ -4,19 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FinLearn | Frequently asked questions</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
+    <title>FinLearn | Courses</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
+    <div id="nav-container">
+      <div id="left-side">
+        <div id="main-menu">
+          <nav id="left-nav">
+            <ul id="left">
+              <li><a href="courses.html">COURSES</a></li>
+              <li><a href="assessments.html">ASSESSMENTS</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="hamburger">
+          <img src="assets/hamburger.svg" />
+        </div>
+      </div>
+      <div id="center">
+        <a href="index.html"><h1>FINLEARN</h1></a>
+      </div>
+      <div id="right">
+        <a href="profile.html"
+          ><img src="assets/profile.svg" alt="Profile Icon"
+        /></a>
+      </div>
+    </div>
+
+    <span class="overlay"></span>
+    <div class="menu" id="menu">
+      <ul class="menu-inner">
+        <li class="menu-item">
+          <a class="menu-link" href="courses.html">COURSES</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="assessments.html">ASSESSMENTS</a>
+        </li>
+        <li class="menu-item"><a class="menu-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div id="faq-container">
+      <h2>Frequently Asked Questions</h2>
+      <div id="questions">
+        <button class="accordion">What is FinLearn?</button>
+        <div class="panel">
+          <p>
+            FinLearn is an educational site that seeks to teach anyone wanting
+            to learn about personal finance, and allowing them to make money
+            while at it.
+          </p>
+        </div>
+        <button class="accordion">How does it work?</button>
+        <div class="panel">
+          <p>Click on any course that suits your needs and start right away!</p>
+        </div>
+        <button class="accordion">How can I start making money?</button>
+        <div class="panel">
+          <p>
+            You can complete assessments related to the course you completed and
+            earn cash after completing them!
+          </p>
+        </div>
+        <button class="accordion">I didn't seem to get my money?</button>
+        <div class="panel">
+          <p>
+            Rest assured, the rewards will be credited into your account after
+            completing our verification process.
+          </p>
+        </div>
+        <button class="accordion">
+          My account has been temporarily suspended!
+        </button>
+        <div class="panel">
+          <p>
+            If you believe that the T&C has not been broken, please email us
+            <a href="mailto:support@finlearn.com">here</a> or fill up the
+            contact form in the
+            <a id="underlined" href="contact.html">CONTACT US</a> page.
+          </p>
+        </div>
+        <button class="accordion">I referred someone!</button>
+        <div class="panel">
+          <p>Thanks for supporting us and the referral program.</p>
+        </div>
+      </div>
+      <div id="questions-unanswered">
+        <p>
+          Didn't manage to find your answers here? Do try contacting us through
+          the form in
+          <a id="underlined" href="contact.html">Contact Us</a> page.
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
