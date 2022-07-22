@@ -426,7 +426,7 @@ button.accordion.active:after {
     #buy-btn-mobile {
         display: flex;
         justify-content: flex-end;
-    }
+    }   
 
     #courses-container, #courses-display {
         padding: 30px 15px;
