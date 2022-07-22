@@ -293,6 +293,9 @@ a {
 
 #courses-display {
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .course:nth-of-type(1) {
@@ -360,6 +363,56 @@ button.accordion.active:after {
     overflow: hidden;
 }
 
+#course-item {
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+#course-left {
+    flex: 1
+}
+
+#course-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#buy-btn {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #43a4;
+    border: none;
+    border-radius: 10px;
+}
+
+#course-feedback {
+    width: 100%;
+    background-color: darkgray;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+#course-review {
+    font-style: italic;
+}
+
+#course-review h5, #course-review p {
+    margin: 5px;
+}
+
+#buy-btn-mobile {
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    
+    width: 100vw;
+    background: yellow;
+}
+
 @media only screen and (max-width: 1024px) {
 
     .overlay.is-active {
@@ -370,8 +423,17 @@ button.accordion.active:after {
         display: block;
     }
 
-    #courses-container {
+    #buy-btn-mobile {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #courses-container, #courses-display {
         padding: 30px 15px;
+    }
+
+    #courses-display {
+        gap: 10px;
     }
 
     #newsletter {
