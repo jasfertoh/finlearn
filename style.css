@@ -413,6 +413,19 @@ button.accordion.active:after {
     background: yellow;
 }
 
+#profile-container {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+#signup {
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+}
+
 @media only screen and (max-width: 1024px) {
 
     .overlay.is-active {
