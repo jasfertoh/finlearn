@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FinLearn | Course Details</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="course.css">
   </head>
   <body>
     <div id="nav-container">
@@ -14,7 +15,7 @@
           <nav id="left-nav">
             <ul id="left">
               <li><a href="courses.html">COURSES</a></li>
-              <li><a href="assessments.html">ASSESSMENTS</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
               <li><a href="faq.html">FAQ</a></li>
               <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -28,9 +29,6 @@
         <a href="index.html"><h1>FINLEARN</h1></a>
       </div>
       <div id="right">
-        <a href="profile.html"
-          ><img src="assets/profile.svg" alt="Profile Icon"
-        /></a>
       </div>
     </div>
 
@@ -41,51 +39,158 @@
           <a class="menu-link" href="courses.html">COURSES</a>
         </li>
         <li class="menu-item">
-          <a class="menu-link" href="assessments.html">ASSESSMENTS</a>
+          <a class="menu-link" href="pricing.html">PRICING</a>
         </li>
         <li class="menu-item">
           <a class="menu-link" href="contact.html">CONTACT</a>
         </li>
         <li class="menu-item"><a class="menu-link" href="faq.html">FAQ</a></li>
       </ul>
+      <div id="buttons">
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+      </div>
     </div>
     <div id="course-item">
       <div id="course-left">
-        <div id="course-image"><img src="#" alt="Course Image" /></div>
+        <div id="course-image">
+          <img id="image" src="#" alt="Course Image" />
+        </div>
       </div>
       <div id="course-right">
-        <div id="course-title">test</div>
-        <div id="course-ratings">4.5</div>
-        <div id="course-authors">Professor X</div>
-        <button id="buy-btn">Buy Now</button>
+        <h2 id="course-title"></h2>
+        <div id="course-ratings"></div>
+        <div id="course-authors"></div>
+        <div id="course-details">
+          <h3>Details</h3>
+          <p id="course-desc"></p>
+        </div>
+        <button id="buy-btn">Enroll</button>
       </div>
     </div>
     <div id="course-feedback">
       <h2>See what others have to say</h2>
       <div id="course-review">
-        <h5>name</h5>
-        <p>Never understood ?? until now, this is a definite must buy!</p>
+        <img id="feedback-person" src="assets/selfie.jpg" />
+        <h5>Jasfer Toh</h5>
+        <p>"Never understood JavaScript until now, this is a definite must to learn JavaScript!"</p>
       </div>
     </div>
-    <div class="flight-types">
-      <input type="radio" name="flight-type" value="coach" id="coach" />
-      <label for="coach"> Coach </label>
-
-      <input
-        type="radio"
-        name="flight-type"
-        value="business"
-        id="business"
-        checked
-      />
-      <label for="business"> Business </label>
-
-      <input type="radio" name="flight-type" value="first" id="first" />
-      <label for="first"> First </label>
+    <div id="recommended-courses">
+      <h2>Recommended Courses</h2>
+      <div class="courses">
+          <div class="course" id="1">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="2">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="3">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="3">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="1">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="2">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course" id="3">
+            <img src="assets/background.jpeg" class="course-img" />
+            <h4 class="course-title">
+              Learn interactive design with Professor X: Styling dadawd
+            </h4>
+            <div class="course-info">
+              <p class="course-authors">Jasfer Toh, Professor X</p>
+              <div class="course-rating">
+                <p class="course-rating-label">4.5</p>
+                <div class="course-stars">
+                  <!-- Javascript to check rating label number and loop number of times to display the stars -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="buy-btn-mobile">
-      <button id="buy-btn">Buy Now</button>
+      <button id="buy-btn">Enroll</button>
     </div>
     <script src="script.js"></script>
+    <script src="course.js"></script>
   </body>
 </html>

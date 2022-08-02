@@ -3,6 +3,7 @@
 body {
     font-family: "Archivo";
     margin: 0;
+    padding: 0;
 }
 
 #nav-container {
@@ -122,7 +123,8 @@ a {
 #courses-container {
     text-align: center;
     padding: 30px;
-    background-color: #A3A3A3;
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
     overflow-x: hidden;
 }
 
@@ -131,7 +133,7 @@ a {
     margin: 0;
 }
 
-#courses {
+.courses {
     display: flex;
     justify-content: flex-start;
     margin-top: 20px;
@@ -166,8 +168,22 @@ a {
     white-space: normal
 }
 
+.course {
+    cursor: pointer;
+}
+
+#course-title {
+    margin: 0px
+}
+
 .course-rating-label {
     color: #A36200
+}
+
+.course-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #newsletter {
@@ -192,16 +208,6 @@ a {
     border: 1px solid #A3A3A3;
 }
 
-#newsletter-btn {
-    padding: 10px 30px;
-    border: none;
-    width: 150px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #8C8C8C;
-    color: white;
-}
-
 #newsletter-btn:hover {
     cursor: pointer;
 }
@@ -215,7 +221,7 @@ a {
 }
 
 /* width */
-#courses::-webkit-scrollbar {
+.courses::-webkit-scrollbar {
     height: 5px;
 }
 
@@ -380,23 +386,19 @@ button.accordion.active:after {
     gap: 10px;
 }
 
-#buy-btn {
-    padding: 15px;
-    font-size: 18px;
-    background-color: #43a4;
-    border: none;
-    border-radius: 10px;
-}
-
 #course-feedback {
-    width: 100%;
     background-color: darkgray;
-    padding: 5px 5px;
+    padding: 15px;
     text-align: center;
 }
 
 #course-review {
     font-style: italic;
+}
+
+#course-feedback h2 {
+    margin-top: 5px;
+    margin-bottom: 10px
 }
 
 #course-review h5, #course-review p {
@@ -408,9 +410,13 @@ button.accordion.active:after {
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
-    
-    width: 100vw;
-    background: yellow;
+    border-top: 2px solid #000;
+    background: #fff;
+    padding: 15px;
+}
+
+#buy-btn-mobile #buy-btn {
+    width: 100%;
 }
 
 #profile-container {
@@ -426,7 +432,101 @@ button.accordion.active:after {
     width: 400px;
 }
 
+#buttons {
+    margin-right: 20px;
+}
+
+#register-btn {
+    font-family: "Archivo";
+    border: 2px solid #34495e;
+    background: #fff;
+    color: #000;
+    padding: 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#register-btn:hover {
+    background:rgba(212, 212, 212, 0.6)
+}
+
+#login-btn {
+    font-family: "Archivo";
+    border: 2px solid #34495e;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#login-btn:hover, #newsletter-btn:hover, #buy-btn:hover {
+    background: #23313f
+}
+
+#newsletter-btn {
+    font-family: "Archivo";
+    border: 2px solid #34495e;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#menu #buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 280px;
+    position: absolute;
+    margin: 10px;
+    bottom: 0;
+    left: 0;
+}
+
+.newsletter-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.newsletter-form-text {
+    font-family: "Archivo";
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 2px solid black;
+    background: #fff;
+    padding: 20px;
+    outline: none;
+    font-size: 16px;
+    color: #000;
+    transition: 0.5s;
+}
+
+.stars {
+    width: 20px;
+}
+
 @media only screen and (max-width: 1024px) {
+
+    #course-item {
+        flex-direction: column;
+    }
+
+    #right #buttons {
+        display: none;
+    }
 
     .overlay.is-active {
         display: block;
@@ -438,8 +538,12 @@ button.accordion.active:after {
 
     #buy-btn-mobile {
         display: flex;
-        justify-content: flex-end;
-    }   
+        justify-content: center;
+    }
+
+    #course-right #buy-btn {
+        display: none;
+    }
 
     #courses-container, #courses-display {
         padding: 30px 15px;

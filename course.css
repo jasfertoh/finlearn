@@ -1,0 +1,57 @@
+body {
+    overflow-x: hidden;
+}
+
+#course-image {
+    display: flex;
+    justify-content: center; 
+}
+
+#course-ratings {
+    color: #A36200
+}
+
+#course-authors {
+    color: #6A6F73
+}
+
+#image {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#buy-btn {
+    font-family: "Archivo";
+    border: 0;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#buy-btn:hover {
+    background-color: #3b21cfbe;
+}
+
+#recommended-courses {
+    padding: 20px 50px ;
+}
+
+#feedback-person {
+    border-radius: 100%;
+    width: 100px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+    #course-ratings, #course-authors {
+        font-size: 16px
+    }
+
+    #recommended-courses {
+        padding: 30px;
+    }
+}

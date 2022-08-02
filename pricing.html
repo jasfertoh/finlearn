@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FinLearn | Assessments</title>
+    <title>FinLearn | Pricing</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pricing.css" />
   </head>
   <body>
     <div id="nav-container">
@@ -14,7 +15,7 @@
           <nav id="left-nav">
             <ul id="left">
               <li><a href="courses.html">COURSES</a></li>
-              <li><a href="assessments.html">ASSESSMENTS</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
               <li><a href="faq.html">FAQ</a></li>
               <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -27,11 +28,7 @@
       <div id="center">
         <a href="index.html"><h1>FINLEARN</h1></a>
       </div>
-      <div id="right">
-        <a href="profile.html"
-          ><img src="assets/profile.svg" alt="Profile Icon"
-        /></a>
-      </div>
+      <div id="right"></div>
     </div>
 
     <span class="overlay"></span>
@@ -41,16 +38,42 @@
           <a class="menu-link" href="courses.html">COURSES</a>
         </li>
         <li class="menu-item">
-          <a class="menu-link" href="assessments.html">ASSESSMENTS</a>
+          <a class="menu-link" href="pricing.html">PRICING</a>
         </li>
         <li class="menu-item">
           <a class="menu-link" href="contact.html">CONTACT</a>
         </li>
         <li class="menu-item"><a class="menu-link" href="faq.html">FAQ</a></li>
       </ul>
+      <div id="buttons">
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+      </div>
     </div>
-    <div id="background-img2">
-      <h1>ASSESSMENTS</h1>
+
+    <div id="pricing-container">
+      <table class="rwd-table">
+        <tr>
+          <th>Features</th>
+          <th>Free</th>
+          <th>Premium</th>
+        </tr>
+        <tr>
+          <td data-th="Features">Ad-free</td>
+          <td data-th="Free">No</td>
+          <td data-th="Premium">Yes</td>
+        </tr>
+        <tr>
+          <td data-th="Features">Unlimited Educational Videos</td>
+          <td data-th="Free">No</td>
+          <td data-th="Premium">Yes</td>
+        </tr>
+        <tr>
+          <td data-th="Features">Price</td>
+          <td data-th="Free">$0.00</td>
+          <td data-th="Premium">$4.99</td>
+        </tr>
+      </table>
     </div>
     <script src="script.js"></script>
   </body>

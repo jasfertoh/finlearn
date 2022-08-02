@@ -1,0 +1,91 @@
+var courseArray = [
+  {
+    courseNo: 1,
+    title: "Learning JavaScript: Beginner Mode",
+    rating: 4.5,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 2,
+    title: "Learning JavaScript: Medium Mode",
+    rating: 4.2,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 3,
+    title: "Learning JavaScript: Hard Mode",
+    rating: 4.6,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 4,
+    title: "Learning JavaScript: Beginner Mode",
+    rating: 4.5,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 5,
+    title: "Learning JavaScript: Medium Mode",
+    rating: 4.2,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 6,
+    title: "Learning JavaScript: Hard Mode",
+    rating: 4.6,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+  {
+    courseNo: 7,
+    title: "Learning JavaScript: Beginner Mode",
+    rating: 4.5,
+    author: "John Lim, Professor X",
+    details:
+      "This JavaScript course has been specially developed for students that are looking to branch out into coding with JavaScript as a starter language, and with John Lim and Professor X teaching, there are many lessons that can be learned. Through this course, students will be able to gain knowledge on how JavaScript works, along with creating projects to display the knowledge that you have gathered, along with exposure to technologies like JQuery, APIs, NodeJS and more. ",
+  },
+];
+
+var courseNo = location.search.split("?")[1].split("=")[1];
+document.getElementById("course-title").innerHTML =
+  courseArray[courseNo - 1].title;
+document.getElementById("course-ratings").innerHTML =
+  courseArray[courseNo - 1].rating;
+document.getElementById("course-authors").innerHTML =
+  courseArray[courseNo - 1].author;
+document.getElementById("course-desc").innerHTML =
+  courseArray[courseNo - 1].details;
+switch (courseNo) {
+  case "1":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "2":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "3":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "4":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "5":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "6":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+  case "7":
+    document.getElementById("image").src = "assets/background.jpeg";
+    break;
+}

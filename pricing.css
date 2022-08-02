@@ -1,0 +1,49 @@
+#pricing-container {
+    font-family: "Archivo";
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.rwd-table {
+    background: #34495E;
+    color: #fff;
+    border-radius: 0.4em;
+    overflow: hidden;
+    margin: 1em 0;
+    min-width: 300px px;
+}
+
+.rwd-table th,
+.rwd-table td:before {
+    color: lightgray;
+}
+
+.rwd-table th,
+.rwd-table td {
+    margin: 0.5em 1em;
+}
+
+.rwd-table tr {
+    border-color: #46637f;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd
+}
+
+@media only screen and (min-width: 480px) {
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+    
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: 0.25em 0.5em;
+    }
+
+    .rwd-table th,
+    .rwd-table td {
+        text-align: left;
+    }
+}
