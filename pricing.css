@@ -31,6 +31,7 @@
 .rwd-table th,
 .rwd-table td {
     margin: 0.5em 1em;
+    padding: 1rem 0.5rem;
 }
 
 .rwd-table tr {
