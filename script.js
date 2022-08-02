@@ -21,11 +21,11 @@ document.querySelectorAll(".menu-link").forEach((link) => {
   });
 });
 
-if (localStorage.getItem("loggedIn") == false) {
+if (localStorage.getItem("loggedIn") == true) {
   document.getElementById("right").innerHTML = `<a href="profile.html"
           ><img src="assets/profile.svg" alt="Profile Icon"
         /></a>`;
-} else {
+} else if (localStorage.getItem("loggedIn") == false) {
   document.getElementById("right").innerHTML = `<div id="buttons">
           <button id="register-btn">Register</button>
           <button id="login-btn">Login</button>
@@ -111,16 +111,12 @@ var courseArray = [
 ];
 
 var courses = document.getElementsByClassName("courses");
-console.log(
-  window.location.href.split("/")[window.location.href.split("/").length - 1]
-);
-if (
-  window.location.href.split("/")[window.location.href.split("/").length - 1] ==
-  "index.html"
-) {
+var link =
+  window.location.href.split("/")[window.location.href.split("/").length - 1];
+if (link == "index.html" || link == "") {
   for (var i = 0; i < 4; i++) {
     courses[0].innerHTML += `<div class="course" id="${i + 1}">
-          <img src="assets/background.jpeg" class="course-img" />
+          <img src="assets/javascript.jpg" class="course-img" />
           <h4 class="course-title">
             ${courseArray[i].title}
           </h4>
@@ -135,13 +131,22 @@ if (
           </div>
         </div>`;
   }
+
+  for (var i = 0; i < 4; i++) {
+    var course = document.getElementsByClassName("course-stars")[i];
+    var rating = document.getElementsByClassName("course-rating-label")[i]
+      .innerHTML;
+    for (var j = 0; j < Math.floor(rating); j++) {
+      course.innerHTML += "<img class='stars' src='assets/star.svg' />";
+    }
+  }
 } else if (
   window.location.href.split("/")[window.location.href.split("/").length - 1] ==
   "courses.html"
 ) {
   for (var i = 0; i < 7; i++) {
     courses[0].innerHTML += `<div class="course" id="${i + 1}">
-          <img src="assets/background.jpeg" class="course-img" />
+          <img src="assets/javascript.jpg" class="course-img" />
           <h4 class="course-title">
             ${courseArray[i].title}
           </h4>
@@ -158,7 +163,7 @@ if (
 
   for (var i = 0; i < 7; i++) {
     courses[1].innerHTML += `<div class="course" id="${i + 1}">
-          <img src="assets/background.jpeg" class="course-img" />
+          <img src="assets/javascript.jpg" class="course-img" />
           <h4 class="course-title">
             ${courseArray[i].title}
           </h4>
@@ -181,6 +186,32 @@ if (
       course.innerHTML += "<img class='stars' src='assets/star.svg' />";
     }
   }
+} else if (link.includes("course.html")) {
+  for (var i = 0; i < 7; i++) {
+    courses[0].innerHTML += `<div class="course" id="${i + 1}">
+          <img src="assets/javascript.jpg" class="course-img" />
+          <h4 class="course-title">
+            ${courseArray[i].title}
+          </h4>
+          <div class="course-info">
+            <p class="course-authors">${courseArray[i].author}</p>
+            <div class="course-rating">
+              <p class="course-rating-label">${courseArray[i].rating}</p>
+              <div class="course-stars">
+                <!-- Javascript to check rating label number and loop number of times to display the stars -->
+              </div>
+            </div>
+          </div>
+        </div>`;
+  }
+  for (var i = 0; i < 14; i++) {
+    var course = document.getElementsByClassName("course-stars")[i];
+    var rating = document.getElementsByClassName("course-rating-label")[i]
+      .innerHTML;
+    for (var j = 0; j < Math.floor(rating); j++) {
+      course.innerHTML += "<img class='stars' src='assets/star.svg' />";
+    }
+  }
 }
 
 var course = document.getElementsByClassName("course");
@@ -191,3 +222,15 @@ for (let k = 0; k < course.length; k++) {
     window.location.href = `/course.html?course=${courseID}`;
   });
 }
+
+document.getElementById("register-btn").addEventListener("click", function () {
+  window.location.href = "/register.html";
+});
+
+document.getElementById("login-btn").addEventListener("click", function () {
+  window.location.href = "/login.html";
+});
+
+document.getElementById("reset-btn").addEventListener("click", function () {
+  window.location.href = "/resetpassword.html";
+});

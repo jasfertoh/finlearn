@@ -66,6 +66,7 @@ a {
     height: 400px;
     max-height: 400px;
     background-image: url('assets/background.jpeg');
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +81,7 @@ a {
     height: 200px;
     max-height: 400px;
     background-image: url('assets/background.jpeg');
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;

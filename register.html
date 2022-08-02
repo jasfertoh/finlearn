@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FinLearn | Pricing</title>
+    <title>FinLearn | Register</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="register.css" />
   </head>
   <body>
     <div id="nav-container">
@@ -51,32 +51,48 @@
       </div>
     </div>
 
-    <div id="pricing-container">
-      <h2>Pricing Plans</h2>
-      <p>The plans available for FinLearn.</p>
-      <table class="rwd-table">
-        <tr>
-          <th>Features</th>
-          <th>Free</th>
-          <th>Premium</th>
-        </tr>
-        <tr>
-          <td data-th="Features">Ad-free</td>
-          <td data-th="Free">No</td>
-          <td data-th="Premium">Yes</td>
-        </tr>
-        <tr>
-          <td data-th="Features">Unlimited Educational Videos</td>
-          <td data-th="Free">No</td>
-          <td data-th="Premium">Yes</td>
-        </tr>
-        <tr>
-          <td data-th="Features">Price</td>
-          <td data-th="Free">$0.00</td>
-          <td data-th="Premium">$4.99</td>
-        </tr>
-      </table>
+    <div id="register-container">
+      <h2>Register</h2>
+      <p>Register for an account to enroll and view videos!</p>
+      <form class="register-form" action="success.html" method="GET">
+        <div id="register-names">
+          <input
+            type="text"
+            class="register-form-text"
+            placeholder="First name"
+            name="firstname"
+            id="firstname"
+            required
+          />
+          <input
+            type="text"
+            class="register-form-text"
+            placeholder="Last name"
+            name="lastname"
+            id="lastname"
+            required
+          />
+        </div>
+        <input
+          type="email"
+          class="register-form-text"
+          placeholder="Your email"
+          id="email"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          class="register-form-text"
+          placeholder="Your password"
+          name="password"
+          required
+        />
+        <input type="submit" class="register-form-btn" value="Register" />
+      </form>
     </div>
     <script src="script.js"></script>
+    <script src="register.js"></script>
   </body>
 </html>

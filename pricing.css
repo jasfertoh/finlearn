@@ -1,6 +1,8 @@
 #pricing-container {
     font-family: "Archivo";
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     padding: 20px;
 }
@@ -11,7 +13,14 @@
     border-radius: 0.4em;
     overflow: hidden;
     margin: 1em 0;
-    min-width: 300px px;
+    min-width: 300px;
+    table-layout: fixed;
+    width: 80%;
+    margin: auto;
+}
+
+#pricing-container h2 {
+    margin: 5px;
 }
 
 .rwd-table th,
@@ -31,6 +40,7 @@
 }
 
 @media only screen and (min-width: 480px) {
+    
     .rwd-table th,
     .rwd-table td {
         padding: 1em !important;
@@ -45,5 +55,11 @@
     .rwd-table th,
     .rwd-table td {
         text-align: left;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rwd-table {
+        width: 100%;
     }
 }

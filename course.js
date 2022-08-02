@@ -60,32 +60,16 @@ var courseArray = [
 var courseNo = location.search.split("?")[1].split("=")[1];
 document.getElementById("course-title").innerHTML =
   courseArray[courseNo - 1].title;
-document.getElementById("course-ratings").innerHTML =
+document.getElementById("c-rating").innerHTML =
   courseArray[courseNo - 1].rating;
 document.getElementById("course-authors").innerHTML =
   courseArray[courseNo - 1].author;
 document.getElementById("course-desc").innerHTML =
   courseArray[courseNo - 1].details;
-switch (courseNo) {
-  case "1":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "2":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "3":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "4":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "5":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "6":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
-  case "7":
-    document.getElementById("image").src = "assets/background.jpeg";
-    break;
+document.getElementById("image").src = "assets/javascript.jpg";
+
+var course = document.getElementById("c-stars");
+console.log(course);
+for (var j = 0; j < Math.floor(courseArray[courseNo - 1].rating); j++) {
+  course.innerHTML += "<img class='stars' src='assets/star.svg' />";
 }
