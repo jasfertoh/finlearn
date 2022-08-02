@@ -6,10 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FinLearn | Profile</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
-    <div id="profile-container">
-      <div id="signup">t</div>
+    <div id="nav-container">
+      <div id="left-side">
+        <div id="main-menu">
+          <nav id="left-nav">
+            <ul id="left">
+              <li><a href="courses.html">COURSES</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="hamburger">
+          <img src="assets/hamburger.svg" />
+        </div>
+      </div>
+      <div id="center">
+        <a href="index.html"><h1>FINLEARN</h1></a>
+      </div>
+      <div id="right"></div>
     </div>
+
+    <span class="overlay"></span>
+    <div class="menu" id="menu">
+      <ul class="menu-inner">
+        <li class="menu-item">
+          <a class="menu-link" href="courses.html">COURSES</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="pricing.html">PRICING</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="contact.html">CONTACT</a>
+        </li>
+        <li class="menu-item"><a class="menu-link" href="faq.html">FAQ</a></li>
+      </ul>
+      <div id="buttons">
+        <button class="register-btn">Register</button>
+        <button class="login-btn">Login</button>
+      </div>
+    </div>
+    <div id="profile-container">
+      <h2>Your Profile</h2>
+      <p>View your profile details here.</p>
+      <div id="profile-details"></div>
+      <button id="logout-btn">Log out</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
   </body>
 </html>

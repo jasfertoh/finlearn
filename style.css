@@ -311,7 +311,7 @@ a {
 }
 
 #faq-container {
-    padding: 50px;
+    padding: 20px;
 }
 
 #faq-container h2 {
@@ -438,7 +438,7 @@ button.accordion.active:after {
     margin-right: 20px;
 }
 
-#register-btn {
+.register-btn {
     font-family: "Archivo";
     border: 2px solid #34495e;
     background: #fff;
@@ -450,11 +450,11 @@ button.accordion.active:after {
     transition: 0.5s;
 }
 
-#register-btn:hover {
+.register-btn:hover {
     background:rgba(212, 212, 212, 0.6)
 }
 
-#login-btn {
+.login-btn {
     font-family: "Archivo";
     border: 2px solid #34495e;
     background: #34495e;
@@ -466,7 +466,7 @@ button.accordion.active:after {
     transition: 0.5s;
 }
 
-#login-btn:hover, #newsletter-btn:hover, #buy-btn:hover {
+.login-btn:hover, #newsletter-btn:hover, #buy-btn:hover {
     background: #23313f
 }
 

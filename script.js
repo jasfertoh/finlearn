@@ -21,14 +21,18 @@ document.querySelectorAll(".menu-link").forEach((link) => {
   });
 });
 
-if (localStorage.getItem("loggedIn") == true) {
+console.log(localStorage.getItem("loggedIn"));
+if (localStorage.getItem("loggedIn") == "true") {
+  console.log("hello");
   document.getElementById("right").innerHTML = `<a href="profile.html"
           ><img src="assets/profile.svg" alt="Profile Icon"
         /></a>`;
-} else if (localStorage.getItem("loggedIn") == false) {
+  console.log(document.getElementById("buttons"));
+  document.getElementById("buttons").style.display = "none";
+} else {
   document.getElementById("right").innerHTML = `<div id="buttons">
-          <button id="register-btn">Register</button>
-          <button id="login-btn">Login</button>
+          <button class="register-btn">Register</button>
+          <button class="login-btn">Login</button>
         </div>`;
 }
 
@@ -51,6 +55,19 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+var registerBtn = document.getElementsByClassName("register-btn");
+for (let i = 0; i < registerBtn.length; i++) {
+  registerBtn[i].addEventListener("click", function () {
+    window.location.href = "/register.html";
+  });
+}
+
+var loginBtn = document.getElementsByClassName("login-btn");
+for (let i = 0; i < loginBtn.length; i++) {
+  loginBtn[i].addEventListener("click", function () {
+    window.location.href = "/login.html";
+  });
+}
 var courseArray = [
   {
     courseNo: 1,
@@ -222,15 +239,3 @@ for (let k = 0; k < course.length; k++) {
     window.location.href = `/course.html?course=${courseID}`;
   });
 }
-
-document.getElementById("register-btn").addEventListener("click", function () {
-  window.location.href = "/register.html";
-});
-
-document.getElementById("login-btn").addEventListener("click", function () {
-  window.location.href = "/login.html";
-});
-
-document.getElementById("reset-btn").addEventListener("click", function () {
-  window.location.href = "/resetpassword.html";
-});

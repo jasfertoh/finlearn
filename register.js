@@ -1,3 +1,7 @@
+if (localStorage.getItem("loggedIn") == "true") {
+  window.location.href = "index.html";
+}
+
 function registerUser() {
   var fname = document.getElementById("firstname").value;
   var lname = document.getElementById("lastname").value;
@@ -16,6 +20,7 @@ function registerUser() {
 
   localStorage.setItem("user", JSON.stringify(user));
   localStorage.setItem("loggedIn", true);
+  window.location.href = "index.html";
 }
 
 document
