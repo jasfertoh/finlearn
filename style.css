@@ -443,7 +443,7 @@ button.accordion.active:after {
     border: 2px solid #34495e;
     background: #fff;
     color: #000;
-    padding: 30px 50px;
+    padding: 12px 50px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -459,7 +459,7 @@ button.accordion.active:after {
     border: 2px solid #34495e;
     background: #34495e;
     color: #fff;
-    padding: 30px 50px;
+    padding: 12px 50px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
