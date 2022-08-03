@@ -58,14 +58,14 @@ for (i = 0; i < acc.length; i++) {
 var registerBtn = document.getElementsByClassName("register-btn");
 for (let i = 0; i < registerBtn.length; i++) {
   registerBtn[i].addEventListener("click", function () {
-    window.location.href = "/register.html";
+    window.location.href = "register.html";
   });
 }
 
 var loginBtn = document.getElementsByClassName("login-btn");
 for (let i = 0; i < loginBtn.length; i++) {
   loginBtn[i].addEventListener("click", function () {
-    window.location.href = "/login.html";
+    window.location.href = "login.html";
   });
 }
 var courseArray = [
@@ -164,6 +164,6 @@ var course = document.getElementsByClassName("course");
 for (let k = 0; k < course.length; k++) {
   course[k].addEventListener("click", function () {
     var courseID = course[k].id;
-    window.location.href = `/course.html?course=${courseID}`;
+    window.location.href = `course.html?course=${courseID}`;
   });
 }

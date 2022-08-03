@@ -139,6 +139,6 @@ var course = document.getElementsByClassName("course");
 for (let k = 0; k < course.length; k++) {
   course[k].addEventListener("click", function () {
     var courseID = course[k].id;
-    window.location.href = `/course.html?course=${courseID}`;
+    window.location.href = `course.html?course=${courseID}`;
   });
 }
