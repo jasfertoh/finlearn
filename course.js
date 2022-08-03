@@ -99,12 +99,14 @@ for (var i = 0; i < buyBtn.length; i++) {
 }
 
 var link = window.location.search.split("=")[1];
-var enrolled = JSON.parse(localStorage.getItem("enrolled"));
+if (localStorage.getItem("enrolled")) {
+  var enrolled = JSON.parse(localStorage.getItem("enrolled"));
 
-if (enrolled.includes(link)) {
-  for (var i = 0; i < buyBtn.length; i++) {
-    buyBtn[i].innerHTML = "Enrolled";
-    buyBtn[i].disabled = true;
+  if (enrolled.includes(link)) {
+    for (var i = 0; i < buyBtn.length; i++) {
+      buyBtn[i].innerHTML = "Enrolled";
+      buyBtn[i].disabled = true;
+    }
   }
 }
 
