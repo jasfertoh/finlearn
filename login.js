@@ -3,6 +3,9 @@ if (localStorage.getItem("loggedIn") == "true") {
 }
 
 function authenticateUser() {
+  if (!localStorage.getItem("user")) {
+    window.alert("You have not created an account!");
+  }
   let user = JSON.parse(localStorage.getItem("user"));
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -11,7 +14,7 @@ function authenticateUser() {
     localStorage.setItem("loggedIn", true);
     window.location.href = "index.html";
   } else {
-    prompt("Wrong email or password");
+    window.alert("Wrong email or password");
   }
 }
 

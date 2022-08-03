@@ -56,6 +56,10 @@ textarea.contact-form-text {
     padding: 20px;
 }
 
+#contact-container h2 {
+    margin: 5px;
+}
+
 .contact-form-btn {
     font-family: "Archivo";
     float: right;

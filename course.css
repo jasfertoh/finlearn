@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
 }
 
-#buy-btn {
+.buy-btn {
     font-family: "Archivo";
     border: 0;
     background: #34495e;
@@ -35,7 +35,7 @@ body {
     transition: 0.5s;
 }
 
-#buy-btn:hover {
+.buy-btn:hover {
     background: #2980b9;
 }
 

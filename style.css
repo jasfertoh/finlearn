@@ -316,10 +316,11 @@ a {
 
 #faq-container h2 {
     text-align: center;
+    margin: 5px;
 }
 
 #questions {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #underlined {
@@ -417,7 +418,7 @@ button.accordion.active:after {
     padding: 15px;
 }
 
-#buy-btn-mobile #buy-btn {
+#buy-btn-mobile .buy-btn {
     width: 100%;
 }
 
@@ -543,7 +544,7 @@ button.accordion.active:after {
         justify-content: center;
     }
 
-    #course-right #buy-btn {
+    #course-right .buy-btn {
         display: none;
     }
 
